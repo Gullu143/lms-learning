@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
   	@teacher = Teacher.new
   end
 
-  def create
+  def create_new_teacher
   	@teacher = current_user.teachers.new(teacher_params)
   	 if @teacher.save!
   		  redirect_to teachers_path, notice: 'successfully created teacher.'
