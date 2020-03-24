@@ -1,0 +1,15 @@
+<h1>Homes#home</h1>
+<p>Find me in app/views/homes/home.html.erb</p>
+
+<%if user_signed_in?%>
+<%= link_to('Logout user', destroy_user_session_path, method: :delete) %>
+<%else%>
+  <%= link_to('Login user', new_user_session_path) %>  
+<%end%>
+<br>
+
+<%if teacher_signed_in?%>
+<%= link_to('Logout teacher', destroy_teacher_session_path, method: :delete) %>
+<%else%>
+  <%= link_to('Login teacher', new_teacher_session_path) %>  
+<%end%>
