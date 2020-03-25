@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post '/create_new_teacher', :to => 'teachers#create_new_teacher'
   resources :teachers
   devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :courses
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
