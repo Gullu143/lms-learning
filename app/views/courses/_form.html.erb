@@ -1,3 +1,6 @@
-<%= form_with model: @course do |f|%>
-
+<%= form_with model: @course, local: true do |f|%>
+ <%= f.label :name%>
+ <%= f.text_field :name%>
+ <%= f.collection_select(:teacher_ids, Teacher.all, :id, :email, {}, {:class=>'my-custom-class', multiple: true})%>
+ <%=f.submit%>
 <%end%>
