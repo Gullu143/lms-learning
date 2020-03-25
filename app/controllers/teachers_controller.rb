@@ -4,6 +4,11 @@ class TeachersController < ApplicationController
   	@teacher = Teacher.all
   end
 
+  def teacher_course
+    @courses = current_teacher.courses
+  end
+
+
   def show
     @teacher = Teacher.find(params[:id])
   end
