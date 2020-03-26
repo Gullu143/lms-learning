@@ -4,7 +4,7 @@ class TeachersController < ApplicationController
   	@teacher = Teacher.all
   end
 
-  def teacher_course
+  def teacher_courses
     @courses = current_teacher.courses
   end
 
